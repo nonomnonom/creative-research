@@ -19,32 +19,40 @@ The guidance distinguishes documented evidence, interpretation, hypotheses, and 
 
 ## Installation
 
-For Codex, clone the complete repository into your personal skills directory:
+Install with the [Skills CLI](https://github.com/vercel-labs/skills) using Node.js and npm:
 
 ```bash
-git clone https://github.com/nonomnonom/creative-research.git ~/.codex/skills/creative-research
+npx skills add nonomnonom/creative-research
 ```
 
-Windows PowerShell:
+The CLI supports Claude Code, Codex, Cursor, OpenCode, and other agents listed in its documentation. Use `--agent` to select target agents and `--global` for a personal installation across projects.
 
-```powershell
-git clone https://github.com/nonomnonom/creative-research.git "$env:USERPROFILE\.codex\skills\creative-research"
+For manual installation, clone or download the repository:
+
+```bash
+git clone https://github.com/nonomnonom/creative-research.git
 ```
 
-Use your configured skills directory if it differs. Keep `SKILL.md`, `agents/`, and `references/` together. Other agents can load the package through their supported skill mechanism.
+Place the complete `creative-research` folder in the skills directory documented by your agent. Keep `SKILL.md` and `references/` together so the supporting guides remain accessible.
+
+## Compatibility
+
+The package uses the open [Agent Skills format](https://agentskills.io/specification). Its core instructions are Markdown with YAML metadata and have no model-provider dependency. `agents/openai.yaml` supplies optional interface metadata for hosts that use it.
+
+Discovery, installation paths, and invocation syntax depend on the host. For an agent without native skill support, provide `SKILL.md` as instructions and make the referenced files accessible through its context or file tools.
 
 ## Usage
 
-Invoke `$creative-research` with the question, project context, and available material. Specify whether you need findings, a research plan, or an experiment.
+Ask your agent to use the creative-research skill with the question, project context, and available material. Specify whether you need findings, a research plan, or an experiment. If your host offers a skill picker or explicit invocation command, use its supported mechanism.
 
 ```text
-Use $creative-research to investigate how objects prompt family memories
+Use the creative-research skill to investigate how objects prompt family memories
 for an exhibition. Analyze these interview transcripts, show the basis
 for your findings, and propose an interaction to explore next.
 ```
 
 ```text
-Use $creative-research to plan an inquiry into rhythm and waiting
+Use the creative-research skill to plan an inquiry into rhythm and waiting
 for a short animation. Recommend reference studies and timing experiments
 before production begins.
 ```
