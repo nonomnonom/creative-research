@@ -1,38 +1,68 @@
 # Creative Research
 
-Skill gratis untuk AI agent yang membantu menyelidiki persoalan kreatif lintas bidang: tulisan, seni visual, desain, film, animasi, musik, pertunjukan, game, material, dan mixed media.
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-Agent memilih metode sesuai pertanyaan, memeriksa sumber, memisahkan bukti dari tafsir, menyintesis temuan, dan menghubungkannya dengan keputusan atau percobaan karya. Instruksi ditulis dalam bahasa Inggris; hasil kerja mengikuti bahasa user.
+Investigate references, context, and creative possibilities across media.
 
-## Contoh penggunaan
+Creative Research helps agents turn an open question into sourced findings, creative options, and an informed next step. It supports writing, visual art, design, film, animation, music, performance, games, and material practice.
 
-Setelah paket tersedia sebagai skill:
+## Capabilities
+
+- Frame an inquiry around the decision a project needs to make.
+- Select suitable methods for contextual, archival, audience, practitioner, or material research.
+- Analyze references and identify principles that can be adapted to new work.
+- Synthesize sources, observations, and interview material while preserving their context.
+- Design experiments and prototypes that resolve an uncertainty or open a new possibility.
+- Translate findings into creative decisions and a usable production handoff.
+
+The guidance distinguishes documented evidence, interpretation, hypotheses, and speculation. Methods are selected for the inquiry, with room for artistic exploration and discoveries through making.
+
+## Installation
+
+For Codex, clone the complete repository into your personal skills directory:
+
+```bash
+git clone https://github.com/nonomnonom/creative-research.git ~/.codex/skills/creative-research
+```
+
+Windows PowerShell:
+
+```powershell
+git clone https://github.com/nonomnonom/creative-research.git "$env:USERPROFILE\.codex\skills\creative-research"
+```
+
+Use your configured skills directory if it differs. Keep `SKILL.md`, `agents/`, and `references/` together. Other agents can load the package through their supported skill mechanism.
+
+## Usage
+
+Invoke `$creative-research` with the question, project context, and available material. Specify whether you need findings, a research plan, or an experiment.
 
 ```text
-Gunakan $creative-research untuk menyelidiki hubungan benda dan ingatan
-bagi pameran saya. Baca transkrip yang tersedia, jelaskan dasar temuan,
-dan usulkan percobaan interaksi yang bisa menjawab pertanyaan tersisa.
+Use $creative-research to investigate how objects prompt family memories
+for an exhibition. Analyze these interview transcripts, show the basis
+for your findings, and propose an interaction to explore next.
 ```
 
 ```text
-Gunakan $creative-research untuk merancang penyelidikan tentang ritme
-dan rasa menunggu dalam animasi pendek. Saya membutuhkan rencana riset
-dan percobaan, sebelum membuat animasinya.
+Use $creative-research to plan an inquiry into rhythm and waiting
+for a short animation. Recommend reference studies and timing experiments
+before production begins.
 ```
 
-## Isi paket
+Prompts and output can use the language of the project. In hosts that support automatic skill selection, the package can also be selected from its description.
 
-- [SKILL.md](SKILL.md): instruksi utama dan pemilihan panduan.
-- [Metode](references/methods.md): pemilihan metode dan persiapan inquiry.
-- [Bukti dan konteks](references/evidence-and-context.md): sumber, budaya, peserta, dan batas akses AI.
-- [Sintesis dan eksperimen](references/synthesis-and-experiments.md): temuan, percobaan, feedback, dan keputusan.
-- [Medium dan handoff](references/media-and-handoff.md): penerapan lintas medium dan penggunaan skill bidang yang tersedia.
-- [Contoh dan review](references/examples-and-review.md): kasus hipotetis dan pemeriksaan hasil.
+## Reference library
 
-Artboard dan storytelling dapat digunakan ketika tersedia dan sesuai tugas. Paket ini berdiri sendiri; tugas bidang yang sudah ditangani skill lain tetap menggunakan kemampuan tersebut.
+| Guide | Focus |
+| --- | --- |
+| [Methods](references/methods.md) | Choosing research approaches and preparing an inquiry |
+| [Evidence and context](references/evidence-and-context.md) | Source evaluation, provenance, cultural context, and participant material |
+| [Synthesis and experiments](references/synthesis-and-experiments.md) | Developing findings, testing possibilities, and making decisions |
+| [Media and handoff](references/media-and-handoff.md) | Adapting an inquiry to its medium and carrying findings into production |
+| [Examples and review](references/examples-and-review.md) | Representative cases and checks for research delivery |
 
-Sumber riset tercantum pada panduan terkait. Metode diadaptasi untuk membantu proyek kreatif; cakupannya tidak mengklaim seluruh tradisi penelitian di dunia.
+[SKILL.md](SKILL.md) contains the working instructions and routes to the references relevant to each task. The package works independently and can complement specialized writing or design skills.
 
-## Lisensi
+## License
 
-[MIT](LICENSE) untuk isi asli paket. Lisensi karya, metode yang diterbitkan sebagai dokumen sumber, rekaman peserta, serta aset pihak ketiga mengikuti pemilik masing-masing. Tautan sumber tidak memindahkan hak atas isinya ke paket ini.
+Original repository content is available under the [MIT License](LICENSE). Referenced publications, recordings, and other third-party materials retain their own rights and terms. Sources are linked from the relevant guides.
